@@ -21,12 +21,14 @@ const ChatBubble = ({ time, message, sent }: ChatBubbleProps) => {
           <UserDetails time={time} sent={sent} />
           {/* Text */}
           <div
-            className={`flex flex-col items-start justify-start p-4 rounded-xl  max-w-xl ${
+            className={`flex flex-col items-start justify-start p-3 md:p-4 rounded-xl  max-w-xl ${
               sent
-                ? 'mr-6 rounded-tr-none bg-primary-500'
-                : 'ml-6 rounded-tl-none bg-yellow-100'
+                ? 'md:mr-6 rounded-tr-none bg-primary-500'
+                : 'md:ml-6 rounded-tl-none bg-yellow-100'
             }`}>
-            <p className='text-base leading-normal text-gray-900'>{message}</p>
+            <p className='text-sm md:text-base leading-normal text-gray-900'>
+              {message}
+            </p>
           </div>
         </div>
       </div>

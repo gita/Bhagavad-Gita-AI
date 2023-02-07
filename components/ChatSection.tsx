@@ -1,5 +1,5 @@
 import ChatBubble from '@/components/ChatBubble'
-import Data from '@/constants/output (1).json'
+import Data from '@/constants/sampleData.json'
 
 const ChatSection = () => {
   return (

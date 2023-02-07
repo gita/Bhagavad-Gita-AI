@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header>
-      <h1 className='text-5xl flex items-center justify-center text-center bg-clip-text h-16 text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 font-extrabold mb-1'>
+      <h1 className='text-4xl md:text-5xl flex items-center justify-center text-center bg-clip-text h-10 md:h-16 text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 font-extrabold mb-1'>
         BhagavadGita.ai
       </h1>
       <p className='text-base leading-normal text-center text-gray-500'>
