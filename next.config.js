@@ -3,4 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  // add image sources
+  images: {
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'via.placeholder.com',
+        },
+      ],
+    },
+  },
+}
