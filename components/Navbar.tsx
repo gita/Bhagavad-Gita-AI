@@ -19,6 +19,7 @@ export default function Example() {
 
 
                                     <a  target = "_blank"
+                                    rel="noreferrer"
                                         referrerPolicy='no-referrer'
                                         href="https://vedvyas.org/"
                                         className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700"
@@ -27,6 +28,7 @@ export default function Example() {
                                     </a>
                                     <a
                                       target = "_blank"
+                                      rel="noreferrer"
                                       referrerPolicy='no-referrer'
                                         href="https://github.com/sponsors/gita"
                                         className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700"
@@ -51,6 +53,7 @@ export default function Example() {
 
                                         <a
                                         target = "_blank"
+                                        rel="noreferrer"
                                         referrerPolicy='no-referrer'
                                         href="https://bhagavadgita.io/"
                                             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium  hover:border-blue-300 hover:text-blue-700"
@@ -74,6 +77,7 @@ export default function Example() {
 
                                         <a
                                          target = "_blank"
+                                         rel="noreferrer"
                                          referrerPolicy='no-referrer'
                                             href="https://play.google.com/store/apps/details?id=com.gitainitiative.bhagavadgita"
                                             className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium  hover:border-green-300 hover:text-green-700"

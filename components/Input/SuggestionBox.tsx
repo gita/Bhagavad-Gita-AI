@@ -8,7 +8,6 @@ interface SuggestionBoxProps {
 const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
 
   const handleSuggestionClick = (e:any) => {
-    console.log(e.target.innerText)
     setInput(e.target.innerText)
   }
   return (
