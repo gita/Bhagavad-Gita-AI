@@ -12,7 +12,7 @@ interface InputProps {
   setChat:React.Dispatch<SetStateAction<Array<{sent:boolean,message:string}>|undefined>>;
 }
 const Input = (
-  { showSuggestions, setShowSuggestions,setInput,input,setChat }: InputProps
+  { showSuggestions, setShowSuggestions,setInput,input,setChat,chat }: InputProps
 ) => {  
   
   const [loading,setLoading] = useState<boolean>(false);
@@ -40,8 +40,14 @@ const Input = (
       setInput("");
       
     }
-    catch (err){
-        console.log(err)      
+    catch (err:any){
+        console.log(err?.response?.status)
+        if(err?.response?.status===429){  
+        let history = chat;
+        history?.push({"sent":false,"message":"I'm sorry, I'm busy right now. Please try again after couple of minutes"})
+        setChat(history);
+        setInput("")
+        }
     }
     finally{
       setLoading(false)
