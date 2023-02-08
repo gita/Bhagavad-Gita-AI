@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 interface UserDetailsProps {
   sent: boolean
-  time: string
+  // time: string
 }
 
-const UserDetails = ({ sent, time }: UserDetailsProps) => {
+const UserDetails = ({ sent }: UserDetailsProps) => {
   return (
     <div
       className={`flex gap-3 items-center ${sent ? 'flex-row-reverse' : ''}`}>
@@ -25,7 +25,7 @@ const UserDetails = ({ sent, time }: UserDetailsProps) => {
           {sent ? 'Arjuna' : 'Shri Krishna'}
         </p>
         <p className='text-xs tracking-wide leading-none text-gray-500'>
-          {useTimeFormat(time)}
+          {/* {useTimeFormat(time)} */}
         </p>
       </div>
     </div>

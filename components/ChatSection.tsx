@@ -8,7 +8,7 @@ const ChatSection = () => {
         return (
           <ChatBubble
             key={index}
-            time={item.time}
+            // time={item.time}
             message={item.message}
             sent={item.sent}
           />
@@ -16,12 +16,10 @@ const ChatSection = () => {
       })}
 
       <ChatBubble
-        time='2011-08-12T20:17:46.384Z'
         message='Namaste, I am Krishna and I can answer any of your questions related to anything. Go ahead ask me something'
         sent={false}
       />
       <ChatBubble
-        time='2011-08-12T20:17:46.384Z'
         message='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat,
           sint deleniti odit non sequi explicabo asperiores dolorem porro nam
           fuga omnis veritatis ipsa debitis assumenda, saepe earum! Voluptate

@@ -6,7 +6,7 @@ const useTimeFormat = (date: string) => {
     hour12: true,
   })
 
-  return timeString
+  return timeString.toString()
 }
 
 export default useTimeFormat

@@ -1,12 +1,12 @@
 import UserDetails from './UserDetails'
 
 interface ChatBubbleProps {
-  time: string
+  // time: string
   message: string
   sent: boolean
 }
 
-const ChatBubble = ({ time, message, sent }: ChatBubbleProps) => {
+const ChatBubble = ({  message, sent }: ChatBubbleProps) => {
   return (
     <>
       <div
@@ -18,7 +18,7 @@ const ChatBubble = ({ time, message, sent }: ChatBubbleProps) => {
             sent ? 'justify-end items-end' : 'items-start justify-start'
           }`}>
           {/* User Details */}
-          <UserDetails time={time} sent={sent} />
+          <UserDetails sent={sent} />
           {/* Text */}
           <div
             className={`flex flex-col items-start justify-start p-3 md:p-4 rounded-xl  max-w-xl ${
