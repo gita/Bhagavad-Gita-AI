@@ -1,18 +1,71 @@
+import React, { useState, SetStateAction, useEffect } from 'react'
 import SuggestionBox from './SuggestionBox'
+import { GenerateAnswer } from '@/apiFunctions/generate';
+import { error } from 'console';
 
-const Input = () => {
+interface InputProps {
+  showSuggestions: boolean
+  setShowSuggestions: React.Dispatch<SetStateAction<boolean>>;
+  input: string
+  setInput: React.Dispatch<SetStateAction<string>>;
+  chat?:Array<{sent:boolean,message:string}>;
+  setChat:React.Dispatch<SetStateAction<Array<{sent:boolean,message:string}>|undefined>>;
+}
+const Input = (
+  { showSuggestions, setShowSuggestions,setInput,input,setChat }: InputProps
+) => {  
+  
+  const [loading,setLoading] = useState<boolean>(false);
+  const [chatHistory,setChatHistory] = useState<Array<string>>([]);
+ 
+  const handleGenerate = async ()=>{
+    try{
+      setLoading(true);
+      const data = await GenerateAnswer({question:input,chat_history:chatHistory});
+      let chatArray:Array<any> =[]; 
+      setChatHistory(data.chat_history);
+      data.chat_history.map((item:string)=>{
+        item.split("\n")?.map((chat_message:string)=>{
+          if(chat_message.startsWith("Human:")){
+            chatArray.push({"sent":true,"message":chat_message.split("Human:")[1]})
+          }
+          else{
+            chatArray.push({"sent":false,"message":chat_message.split("AI:")[1]})
+          }
+        })
+        
+      })
+      setChat(chatArray);
+      setShowSuggestions(false);
+      setInput("");
+      
+    }
+    catch (err){
+        console.log(err)      
+    }
+    finally{
+      setLoading(false)
+    }
+  }
   return (
     <>
       <div className='flex gap-2 items-end'>
         <div className='w-full'>
-          {/* <SuggestionBox></SuggestionBox> */}
+          {
+            showSuggestions && (
+              <SuggestionBox setInput={setInput}></SuggestionBox>
+            )
+          }
           <input
+            value ={input}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+            disabled={loading}
             type='text'
             placeholder='Type your message here'
             className='w-full h-12 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent'
           />
         </div>
-        <button className='bg-primary-500 rounded-full h-11 aspect-square grid place-items-center'>
+        <button className={`bg-primary-500 rounded-full h-11 aspect-square grid place-items-center ${ loading ?"animate-spin" :""} `} onClick={handleGenerate}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'
