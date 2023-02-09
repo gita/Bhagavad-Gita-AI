@@ -1,6 +1,7 @@
 import React, { useState, SetStateAction, useEffect } from 'react'
 import SuggestionBox from './SuggestionBox'
 import { GenerateAnswer } from '@/apiFunctions/generate';
+import { usePlausible } from 'next-plausible'
 import { error } from 'console';
 
 interface InputProps {
@@ -14,7 +15,7 @@ interface InputProps {
 const Input = (
   { showSuggestions, setShowSuggestions, setInput, input, setChat, chat }: InputProps
 ) => {
-
+  const plausible = usePlausible()
   const [loading, setLoading] = useState<boolean>(false);
   const [chatHistory, setChatHistory] = useState<Array<string>>([]);
 
@@ -51,6 +52,11 @@ const Input = (
     }
     finally {
       setLoading(false)
+      plausible('Generate', {
+        props: {
+          input
+        }
+      });
     }
   }
   return (
@@ -76,7 +82,7 @@ const Input = (
             className='w-full h-12 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent'
           />
         </div>
-        <button className={`bg-primary-500 rounded-full h-12 aspect-square grid place-items-center`} onClick={handleGenerate}>
+        <button className={`ask-krishna bg-primary-500 rounded-full h-12 aspect-square grid place-items-center`} onClick={handleGenerate} id="askKrishna">
           {!loading ?
             <svg
               xmlns='http://www.w3.org/2000/svg'
