@@ -52,13 +52,13 @@ const Input = (
     }
     finally {
       setLoading(false)
-      plausible('Generate', {
+      plausible('ask_krishna', {
         props: {
           input
         }
       });
       // sent event to Google Analytics 4 (gtag.js)
-      (window as any).gtag('event', 'Generate', {
+      (window as any).gtag('event', 'ask_krishna', {
         'event_category': 'Generate',
         'event_label': input
       });
