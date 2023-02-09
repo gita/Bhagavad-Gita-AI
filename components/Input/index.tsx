@@ -2,7 +2,7 @@ import React, { useState, SetStateAction, useEffect } from 'react'
 import SuggestionBox from './SuggestionBox'
 import { GenerateAnswer } from '@/apiFunctions/generate';
 import { usePlausible } from 'next-plausible'
-import { error } from 'console';
+
 
 interface InputProps {
   showSuggestions: boolean
@@ -56,6 +56,11 @@ const Input = (
         props: {
           input
         }
+      });
+      // sent event to Google Analytics 4 (gtag.js)
+      (window as any).gtag('event', 'Generate', {
+        'event_category': 'Generate',
+        'event_label': input
       });
     }
   }
