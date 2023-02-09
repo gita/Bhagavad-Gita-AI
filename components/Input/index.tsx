@@ -65,9 +65,14 @@ const Input = (
           <input
             value={input}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+              if (e.key === 'Enter') {
+                handleGenerate();
+              }
+            }}
             disabled={loading}
             type='text'
-            placeholder='Type your message here'
+            placeholder='Type your message here...'
             className='w-full h-12 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent'
           />
         </div>
