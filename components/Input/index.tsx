@@ -44,7 +44,7 @@ const Input = (
       console.log(err?.response?.status)
       if (err?.response?.status === 429) {
         let history = chat;
-        history?.push({ "sent": false, "message": "I'm sorry, I'm busy right now. Please try again after couple of minutes" })
+        history?.push({ "sent": false, "message": "Oh devoted one, I apologize for not being able to attend to you in this moment. Please have patience and come back after a small while, as I am currently occupied." })
         setChat(history);
         setInput("")
       }

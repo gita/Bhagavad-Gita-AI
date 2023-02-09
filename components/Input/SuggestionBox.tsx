@@ -19,7 +19,7 @@ const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
         <div className='flex flex-col sm:flex-row gap-2 items-start justify-start'>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
-              How to be more productive?
+              What is life&apos;s purpose?
             </p>
           </div>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
@@ -29,24 +29,24 @@ const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
           </div>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
-              How to be polite to all?
+              What is the path to enlightenment?
             </p>
           </div>
         </div>
         <div className='flex flex-col sm:flex-row gap-2 items-start justify-start'>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
-              How to do more work in less time?
+              How to stay positive?
             </p>
           </div>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
-              How to be more productive?
+              Please explain Chapter 12 Verse 13.
             </p>
           </div>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}> 
-              What is the motive of life?
+              What is Karma Yoga?
             </p>
           </div>
         </div>
