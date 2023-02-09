@@ -92,7 +92,7 @@ export default function Example() {
 
                             <div className="-mr-2 flex items-center sm:hidden">
                                 {/* Mobile menu button */}
-                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -110,28 +110,28 @@ export default function Example() {
                             <Disclosure.Button
                                 as="a"
                                 href="https://vedvyas.org/"
-                                className="block border-l-4 border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-primary-500"
+                                className="block border-l-4 border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500"
                             >
                                 About Us
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
                                 href="https://github.com/sponsors/gita"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-primary-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
                             >
                                 Donate
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
                                 href="https://bhagavadgita.io/"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-primary-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
                             >
                                 BhagavadGita.io
                             </Disclosure.Button>
                             <Disclosure.Button
                                 as="a"
                                 href="https://play.google.com/store/apps/details?id=com.gitainitiative.bhagavadgita"
-                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-primary-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
                             >
                                 Bhagavad Gita App
                             </Disclosure.Button>
