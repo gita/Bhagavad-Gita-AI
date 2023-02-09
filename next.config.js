@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const { withPlausibleProxy } = require('next-plausible')
+
 const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = {
+module.exports = withPlausibleProxy()({
   // add image sources
   images: {
     images: {
@@ -15,4 +17,4 @@ module.exports = {
       ],
     },
   },
-}
+})
