@@ -11,7 +11,7 @@ const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
     setInput(e.target.innerText)
   }
   return (
-    <div className='w-full flex flex-col space-y-4 items-start justify-start px-6 py-4 bg-yellow-50 border rounded-tl-lg rounded-tr-lg border-gray-300'>
+    <div className='w-full flex flex-col space-y-4 items-start justify-start px-6 py-4 bg-primary-300 border rounded-tl-lg rounded-tr-lg border-gray-300'>
       <p className='text-xs tracking-wide leading-none text-gray-600'>
         Suggestions:
       </p>
