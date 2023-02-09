@@ -24,7 +24,7 @@ const ChatBubble = ({  message, sent }: ChatBubbleProps) => {
             className={`flex flex-col items-start justify-start p-3 md:p-4 rounded-xl  max-w-xl ${
               sent
                 ? 'md:mr-6 rounded-tr-none bg-primary-500'
-                : 'md:ml-6 rounded-tl-none bg-yellow-100'
+                : 'md:ml-6 rounded-tl-none bg-primary-100'
             }`}>
             <p className='text-sm md:text-base leading-normal text-gray-900'>
               {message}
