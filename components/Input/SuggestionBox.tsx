@@ -16,7 +16,7 @@ const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
         Suggestions:
       </p>
       <div className='flex flex-col space-y-2 items-start justify-start'>
-        <div className='flex flex-col sm:flex-row space-x-2 space-y-2 sm:space-y-0 items-start justify-start'>
+        <div className='flex flex-col sm:flex-row gap-2 items-start justify-start'>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
               How to be more productive?
@@ -33,7 +33,7 @@ const SuggestionBox = ({setInput}:SuggestionBoxProps) => {
             </p>
           </div>
         </div>
-        <div className='flex flex-col sm:flex-row space-y-2 sm:space-y-0  space-x-2 items-start justify-start'>
+        <div className='flex flex-col sm:flex-row gap-2 items-start justify-start'>
           <div className='flex items-start justify-start px-4 py-1 bg-primary-500 rounded-full'>
             <p className='text-sm leading-normal text-gray-900 cursor-pointer' onClick={handleSuggestionClick}>
               How to do more work in less time?

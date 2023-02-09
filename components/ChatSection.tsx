@@ -10,7 +10,7 @@ interface ChatSectionProps {
 }
 const ChatSection = ({showSuggestions,setShowSuggestions,chat}:ChatSectionProps) => {
   return (
-    <section className='overflow-auto scrollbar-thumb-primary-500 scrollbar-thin scrollbar-thumb-rounded-lg pr-2'>
+    <section className='overflow-auto scrollbar-none pr-2'>
      
 
       <ChatBubble
