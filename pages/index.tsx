@@ -31,7 +31,7 @@ export default function Home() {
             "name": "Ved Vyas Foundation",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://bhagavadgita.ai/static/images/bhagavad-gita-ai.jpg"
+              "url": "https://sanskriti-ai.s3.ap-south-1.amazonaws.com/bhagavad-gita-ai.jpeg"
             },
             "sameAs": [
               "https://twitter.com/ShriKrishna",
@@ -46,7 +46,7 @@ export default function Home() {
     <>
       <Head>
         <title>Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT</title>
-        <link rel="icon" type="image/png" href="https://bhagavadgita.ai/static/images/krishna.png" />
+        <link rel="icon" type="image/png" href="https://sanskriti-ai.s3.ap-south-1.amazonaws.com/krishna.png" />
 
         <meta name="description"
           content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before." />
@@ -59,7 +59,7 @@ export default function Home() {
           content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bhagavadgita.ai" />
-        <meta property="og:image" content="https://bhagavadgita.ai/static/images/bhagavad-gita-ai.jpg" />
+        <meta property="og:image" content="https://sanskriti-ai.s3.ap-south-1.amazonaws.com/bhagavad-gita-ai.jpeg" />
         <meta property="og:site_name" content="Bhagavad Gita AI" />
         <meta property="og:locale" content="en_US" />
 
@@ -67,7 +67,7 @@ export default function Home() {
         <meta name="twitter:title" content="Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT" />
         <meta name="twitter:description"
           content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before." />
-        <meta name="twitter:image" content="https://bhagavadgita.ai/static/images/bhagavad-gita-ai.jpg" />
+        <meta name="twitter:image" content="https://sanskriti-ai.s3.ap-south-1.amazonaws.com/bhagavad-gita-ai.jpeg" />
         <meta name="twitter:site" content="@ShriKrishna" />
         <meta name="twitter:creator" content="@ShriKrishna" />
 
