@@ -18,6 +18,11 @@ export default function Example() {
                 <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>
                   <Link
                     className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700'
+                    href='/'>
+                    Home
+                  </Link>
+                  <Link
+                    className='inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700'
                     href='/about'>
                     About Us
                   </Link>
@@ -108,6 +113,14 @@ export default function Example() {
           <Disclosure.Panel className='sm:hidden'>
             <div className='space-y-1 pt-2 pb-3'>
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+
+              <Disclosure.Button
+                as='a'
+                href='/'
+                className='block border-l-4 border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500'>
+                Home
+              </Disclosure.Button>
+
               <Disclosure.Button
                 as='a'
                 href='/about'
