@@ -96,7 +96,7 @@ const Input = ({
           className="w-full h-12 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         />
         <button
-          className={`ask-krishna absolute right-0 bottom-0 bg-primary-500  h-12 aspect-square grid place-items-center`}
+          className={`ask-krishna absolute right-0 bottom-0 bg-primary-500 rounded-lg h-12 aspect-square grid place-items-center`}
           onClick={handleGenerate}
           id="askKrishna"
         >
