@@ -22,7 +22,7 @@ const UserDetails = ({ sent }: UserDetailsProps) => {
           sent ? 'justify-end items-end' : ''
         }`}>
         <p className='text-sm font-bold tracking-wider leading-none text-gray-800 uppercase whitespace-nowrap'>
-          {sent ? 'Arjuna' : 'Shri Krishna'}
+          {sent ? 'Arjuna' : 'GitaGPT'}
         </p>
         <p className='text-xs tracking-wide leading-none text-gray-500'>
           {/* {useTimeFormat(time)} */}
