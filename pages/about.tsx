@@ -109,7 +109,7 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
         />
       </Head>
       <Navbar></Navbar>
-      <main className='max-w-6xl pt-5 pb-2 mx-auto h-[100vh] grid grid-rows-layout gap-2 px-4'>
+      <main className='max-w-4xl pt-5 pb-2 mx-auto h-[100vh]'>
         <NotionPage recordMap={recordMap} rootPageId={rootNotionPageId} />
       </main>
     </>
