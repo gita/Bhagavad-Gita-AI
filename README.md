@@ -1,7 +1,7 @@
 # GitaGPT - Talk to Krishna with Bhagavad Gita AI
 ![bhagavad-gita-ai](https://user-images.githubusercontent.com/32533774/218021917-c578b980-4e5e-4f2e-82f1-b048bd7f8bdc.jpeg)
 
-[GitaGPT](bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
+[GitaGPT](https://bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
 
 ## Features
 - Conversational interaction with Lord Krishna using ChatGPT
@@ -21,7 +21,19 @@ ChatGita has already become viral, with thousands of people using it to answer t
 ## Contributing
 We welcome contributions to GitaGPT and encourage you to submit pull requests with any improvements you make. Whether you're fixing a bug or adding a new feature, your contributions will help make GitaGPT the best it can be.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Here are just a few ways you can get involved:**
+
+- 🎨 Are you a designer? Help us create beautiful and user-friendly interfaces for our websites and apps.
+- 💻 Are you a developer? Help us build innovative and cutting-edge software applications.
+- 📝 Are you a writer? Contribute articles, blog posts, or even create video content that can help spread the teachings of Sanatana Dharma.
+- 📱 Are you a social media expert? Help us reach out to more people and spread the word about our work.
+- 🔍 Are you an SEO expert? Help us make sure our content is easily accessible and ranks high on search engines.
+
+So what are you waiting for?
+
+🚀 Let's make a difference together! 🙌
+
+[Join our WhatsApp group to connect with like-minded individuals and get involved.](https://chat.whatsapp.com/DJELAm60HsKKkoVU1mH3fu)
 
 ### Getting Started
 
