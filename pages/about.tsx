@@ -5,11 +5,10 @@ import { NotionAPI } from 'notion-client';
 import { ExtendedRecordMap } from 'notion-types';
 
 import { NotionPage } from '@/components/NotionPage';
+import { rootNotionPageId, previewImagesEnabled } from '@/lib/config';
+import * as notion from '@/lib/notion';
 
 export const getStaticProps = async (context: any) => {
-  const rootNotionPageId = '3159e956f31e40d8aeac3ea76a22ae55';
-
-  const notion = new NotionAPI();
   const recordMap = await notion.getPage(rootNotionPageId);
 
   return {
@@ -21,8 +20,6 @@ export const getStaticProps = async (context: any) => {
 };
 
 export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
-  const rootNotionPageId = '3159e956f31e40d8aeac3ea76a22ae55';
-
   function addJsonLd() {
     return {
       __html: `{
@@ -110,7 +107,11 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
       </Head>
       <Navbar></Navbar>
       <main className='max-w-4xl pt-5 pb-2 mx-auto h-[100vh]'>
-        <NotionPage recordMap={recordMap} rootPageId={rootNotionPageId} />
+        <NotionPage
+          recordMap={recordMap}
+          rootPageId={rootNotionPageId}
+          previewImagesEnabled={previewImagesEnabled}
+        />
       </main>
     </>
   );
