@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
           });
         `}
       </Script>
-      <PlausibleProvider domain="bhagavadgita.ai" selfHosted={true} customDomain="https://analytics.bhagavadgita.io" trackLocalhost trackOutboundLinks enabled>
+      <PlausibleProvider domain="bhagavadgita.ai" trackOutboundLinks>
         <Component {...pageProps} />
       </PlausibleProvider>
     </>
