@@ -9,9 +9,11 @@ import { NotionRenderer } from 'react-notion-x';
 export const NotionPage = ({
   recordMap,
   rootPageId,
+  previewImagesEnabled,
 }: {
   recordMap: ExtendedRecordMap;
   rootPageId?: string;
+  previewImagesEnabled: boolean;
 }) => {
   if (!recordMap) {
     return null;
@@ -28,6 +30,7 @@ export const NotionPage = ({
         fullPage={false}
         darkMode={false}
         rootPageId={rootPageId}
+        previewImages={previewImagesEnabled}
         components={{
           nextImage: Image,
           nextLink: Link,
