@@ -1,7 +1,7 @@
 # GitaGPT - Talk to Krishna with Bhagavad Gita AI
 ![bhagavad-gita-ai](https://user-images.githubusercontent.com/32533774/218021917-c578b980-4e5e-4f2e-82f1-b048bd7f8bdc.jpeg)
 
-GitaGPT is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
+[GitaGPT](bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
 
 ## Features
 - Conversational interaction with Lord Krishna using ChatGPT
