@@ -21,7 +21,7 @@ const Header = () => {
       </p>
       <div className="flex items-start justify-start px-4 py-2 bg-gray-200 rounded-full mx-auto w-fit mt-3">
         <p className="text-xs font-medium tracking-wide leading-none text-center text-black">
-          250,000+ devotees guided so far
+          300,000+ devotees guided so far
         </p>
       </div>
     </header>
