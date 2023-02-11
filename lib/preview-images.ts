@@ -1,10 +1,10 @@
-import got from 'got';
-import lqip from 'lqip-modern';
-import { ExtendedRecordMap, PreviewImage, PreviewImageMap } from 'notion-types';
-import { getPageImageUrls } from 'notion-utils';
-import pMap from 'p-map';
-import pMemoize from 'p-memoize';
-import { defaultMapImageUrl } from 'react-notion-x';
+import got from "got";
+import lqip from "lqip-modern";
+import { ExtendedRecordMap, PreviewImage, PreviewImageMap } from "notion-types";
+import { getPageImageUrls } from "notion-utils";
+import pMap from "p-map";
+import pMemoize from "p-memoize";
+import { defaultMapImageUrl } from "react-notion-x";
 
 interface Error {
   status?: number;
@@ -34,7 +34,7 @@ export async function getPreviewImageMap(
 
 async function createPreviewImage(url: string): Promise<PreviewImage | null> {
   try {
-    const { body } = await got(url, { responseType: 'buffer' });
+    const { body } = await got(url, { responseType: "buffer" });
     const result = await lqip(body);
 
     return {
@@ -46,7 +46,7 @@ async function createPreviewImage(url: string): Promise<PreviewImage | null> {
     if (err.message === "Input buffer contains unsupported image format") {
       return null;
     }
-    console.warn('Failed to create preview image', url, err.message);
+    console.warn("Failed to create preview image", url, err.message);
     return null;
   }
 }

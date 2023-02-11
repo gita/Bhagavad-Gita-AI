@@ -1,4 +1,4 @@
-export const rootNotionPageId = '3159e956f31e40d8aeac3ea76a22ae55';
+export const rootNotionPageId = "d32a693b273a49c68dbe5c7079022e78";
 
 // NOTE: having this enabled can be pretty expensive as it re-generates preview
 // images each time a page is built. In a production setting, we recommend that
