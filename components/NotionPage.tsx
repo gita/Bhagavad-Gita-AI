@@ -1,10 +1,10 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from "react";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import Image from "next/image";
 
-import { ExtendedRecordMap } from 'notion-types';
-import { NotionRenderer } from 'react-notion-x';
+import { ExtendedRecordMap } from "notion-types";
+import { NotionRenderer } from "react-notion-x";
 
 export const NotionPage = ({
   recordMap,
@@ -19,7 +19,7 @@ export const NotionPage = ({
     return null;
   }
   const Collection = dynamic(() =>
-    import('react-notion-x/build/third-party/collection').then(
+    import("react-notion-x/build/third-party/collection").then(
       (m) => m.Collection
     )
   );

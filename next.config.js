@@ -8,12 +8,12 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**.amazonaws.com',
+        protocol: "https",
+        hostname: "**.amazonaws.com",
       },
       {
-        protocol: 'https',
-        hostname: '**.notion.so',
+        protocol: "https",
+        hostname: "**.notion.so",
       },
     ],
   },

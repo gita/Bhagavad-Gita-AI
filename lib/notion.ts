@@ -1,8 +1,8 @@
-import { NotionAPI } from 'notion-client';
-import { ExtendedRecordMap, SearchParams, SearchResults } from 'notion-types';
+import { NotionAPI } from "notion-client";
+import { ExtendedRecordMap, SearchParams, SearchResults } from "notion-types";
 
-import { previewImagesEnabled } from './config';
-import { getPreviewImageMap } from './preview-images';
+import { previewImagesEnabled } from "./config";
+import { getPreviewImageMap } from "./preview-images";
 
 const notion = new NotionAPI();
 
