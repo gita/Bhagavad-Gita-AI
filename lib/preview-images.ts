@@ -6,6 +6,10 @@ import pMap from 'p-map';
 import pMemoize from 'p-memoize';
 import { defaultMapImageUrl } from 'react-notion-x';
 
+interface Error {
+  status?: number;
+  message: string;
+}
 // NOTE: this is just an example of how to pre-compute preview images.
 // Depending on how many images you're working with, this can potentially be
 // very expensive to recompute, so in production we recommend that you cache
@@ -38,12 +42,11 @@ async function createPreviewImage(url: string): Promise<PreviewImage | null> {
       originalHeight: result.metadata.originalHeight,
       dataURIBase64: result.metadata.dataURIBase64,
     };
-  } catch (err) {
-    if (err.message === 'Input buffer contains unsupported image format') {
+  } catch (err: Error | any) {
+    if (err.message === "Input buffer contains unsupported image format") {
       return null;
     }
-
-    console.warn('failed to create preview image', url, err.message);
+    console.warn('Failed to create preview image', url, err.message);
     return null;
   }
 }
