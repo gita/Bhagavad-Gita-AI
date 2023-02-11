@@ -106,9 +106,7 @@ export default function Home() {
       <Navbar></Navbar>
       <main className="max-w-4xl pt-5 pb-2 mx-auto h-[90vh] grid grid-rows-layout gap-2 px-4">
         <Header />
-        <ChatSection
-          chat={chat}
-        />
+        <ChatSection chat={chat} />
 
         <Input
           showSuggestions={showSuggestions}

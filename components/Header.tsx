@@ -8,8 +8,8 @@ const Header = () => {
       </h1>
       <p className="text-md leading-normal text-center text-gray-500">
         Unlock Your Potential with GitaGPT - The AI-Powered Spiritual Companion.
-      {/* </p> */}
-      {/* <p className="text-sm leading-normal text-center"> */}
+        {/* </p> */}
+        {/* <p className="text-sm leading-normal text-center"> */}
         <a
           className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-600 ml-1"
           target="_blank"

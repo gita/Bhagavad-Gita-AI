@@ -25,56 +25,56 @@ const Input = ({
   setChat,
   chat,
 }: InputProps) => {
-  const plausible = usePlausible()
-  const [loading, setLoading] = useState<boolean>(false)
-  const [chatHistory, setChatHistory] = useState<Array<string>>([])
+  const plausible = usePlausible();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [chatHistory, setChatHistory] = useState<Array<string>>([]);
 
   const handleGenerate = async () => {
     try {
-      setLoading(true)
+      setLoading(true);
       const data = await GenerateAnswer({
         question: input,
         chat_history: chatHistory,
-      })
-      let chatArray: Array<any> = []
-      setChatHistory(data.chat_history)
+      });
+      let chatArray: Array<any> = [];
+      setChatHistory(data.chat_history);
       data.chat_history.map((item: string) => {
-        item.split('\n')?.map((chat_message: string) => {
-          if (chat_message.startsWith('Human:')) {
+        item.split("\n")?.map((chat_message: string) => {
+          if (chat_message.startsWith("Human:")) {
             chatArray.push({
               sent: true,
-              message: chat_message.split('Human:')[1],
-            })
+              message: chat_message.split("Human:")[1],
+            });
           } else {
             chatArray.push({
               sent: false,
-              message: chat_message.split('AI:')[1],
-            })
+              message: chat_message.split("AI:")[1],
+            });
           }
-        })
-      })
-      setChat(chatArray)
-      setShowSuggestions(false)
-      setInput('')
+        });
+      });
+      setChat(chatArray);
+      setShowSuggestions(false);
+      setInput("");
     } catch (err: Error | any) {
       if (err?.response?.status === 429) {
-        let history = chat
+        let history = chat;
         history?.push({
           sent: false,
           message:
-            'Oh devoted one, I apologize for not being able to attend to you in this moment. Please have patience and come back after a small while, as I am currently occupied.',
-        })
-        setChat(history)
-        setInput('')
+            "Oh devoted one, I apologize for not being able to attend to you in this moment. Please have patience and come back after a small while, as I am currently occupied.",
+        });
+        setChat(history);
+        setInput("");
       }
     } finally {
-      setLoading(false)
-      plausible('AskKrishna');
-      
-      (window as any).gtag('event', 'ask_krishna', {
-        event_category: 'Generate',
+      setLoading(false);
+      plausible("AskKrishna");
+
+      (window as any).gtag("event", "ask_krishna", {
+        event_category: "Generate",
         event_label: input,
-      })
+      });
     }
   };
   return (
@@ -88,8 +88,8 @@ const Input = ({
             setInput(e.target.value)
           }
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (e.key === 'Enter') {
-              handleGenerate()
+            if (e.key === "Enter") {
+              handleGenerate();
             }
           }}
           disabled={loading}
@@ -102,7 +102,7 @@ const Input = ({
           onClick={handleGenerate}
           id="askKrishna"
           style={{
-            borderLeft: 'none',
+            borderLeft: "none",
           }}
         >
           {!loading ? (
@@ -142,7 +142,7 @@ const Input = ({
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Input;
