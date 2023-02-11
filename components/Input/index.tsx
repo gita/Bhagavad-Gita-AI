@@ -13,6 +13,10 @@ interface InputProps {
     SetStateAction<Array<{ sent: boolean; message: string }> | undefined>
   >;
 }
+interface Error {
+  status?: number;
+}
+
 const Input = ({
   showSuggestions,
   setShowSuggestions,
@@ -52,8 +56,7 @@ const Input = ({
       setChat(chatArray)
       setShowSuggestions(false)
       setInput('')
-    } catch (err) {
-      console.log(err?.response?.status)
+    } catch (err: Error | any) {
       if (err?.response?.status === 429) {
         let history = chat
         history?.push({
@@ -66,13 +69,12 @@ const Input = ({
       }
     } finally {
       setLoading(false)
-      // plausible('AskKrishna')(
-      //   // sent event to Google Analytics 4 (gtag.js)
-      //   window as any,
-      // ).gtag('event', 'ask_krishna', {
-      //   event_category: 'Generate',
-      //   event_label: input,
-      // })
+      plausible('AskKrishna');
+      
+      (window as any).gtag('event', 'ask_krishna', {
+        event_category: 'Generate',
+        event_label: input,
+      })
     }
   };
   return (
@@ -100,17 +102,7 @@ const Input = ({
           onClick={handleGenerate}
           id="askKrishna"
           style={{
-            //   backgroundColor: 'white',
             borderLeft: 'none',
-            //   border: '1px solid gray',
-            //   borderRadius: 'lg',
-            //   // height: '10px',
-            //   // width: '10px',
-            //   display: 'grid',
-            //   placeItems: 'center',
-            //   position: 'absolute',
-            //   right: '0',
-            //   bottom: '0',
           }}
         >
           {!loading ? (
@@ -120,7 +112,7 @@ const Input = ({
               // fill="orange"
               fill="none"
               stroke="orange"
-              stroke-width="2"
+              strokeWidth="2"
               className="w-6 h-6 text-black"
             >
               <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />

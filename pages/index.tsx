@@ -107,8 +107,6 @@ export default function Home() {
       <main className="max-w-4xl pt-5 pb-2 mx-auto h-[90vh] grid grid-rows-layout gap-2 px-4">
         <Header />
         <ChatSection
-          showSuggestions={showSuggestions}
-          setShowSuggestions={setShowSuggestions}
           chat={chat}
         />
 
