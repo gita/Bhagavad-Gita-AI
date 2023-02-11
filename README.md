@@ -1,8 +1,8 @@
-# GitaGPT - Talk to Krishna with Bhagavad Gita AI
+# Gita GPT - Talk to Krishna with Bhagavad Gita AI
 
 ![bhagavad-gita-ai](https://user-images.githubusercontent.com/32533774/218021917-c578b980-4e5e-4f2e-82f1-b048bd7f8bdc.jpeg)
 
-[GitaGPT](https://bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
+[Gita GPT](https://bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
 
 ## Features
 
@@ -15,17 +15,17 @@
 
 ChatGita uses advanced AI technology to provide you with answers to your questions based on the teachings of the Bhagavad Gita. Simply ask a question related to your faith or life and receive a response in a conversational format. The conversations are recorded in a fixed context to provide you with a better understanding of the teachings of Lord Krishna.
 
-## Why GitaGPT?
+## Why Gita GPT?
 
-GitaGPT offers an unparalleled experience for those seeking to connect with the divine and gain a deeper understanding of the teachings of the Bhagavad Gita. With its user-friendly interface, personalised content, and advanced AI technology, GitaGPT provides you with the spiritual guidance and comfort you need in your life.
+Gita GPT offers an unparalleled experience for those seeking to connect with the divine and gain a deeper understanding of the teachings of the Bhagavad Gita. With its user-friendly interface, personalised content, and advanced AI technology, GitaGPT provides you with the spiritual guidance and comfort you need in your life.
 
 ## Try ChatGita for yourself
 
-ChatGita has already become viral, with thousands of people using it to answer their everyday queries. Test its accuracy for yourself and see if it can help you gain a deeper understanding of the teachings of Lord Krishna.
+Bhagavad Gita AI has already become viral, with thousands of people using it to answer their everyday queries. Test its accuracy for yourself and see if it can help you gain a deeper understanding of the teachings of Lord Krishna.
 
 ## Contributing
 
-We welcome contributions to GitaGPT and encourage you to submit pull requests with any improvements you make. Whether you're fixing a bug or adding a new feature, your contributions will help make GitaGPT the best it can be.
+We welcome contributions to Gita GPT and encourage you to submit pull requests with any improvements you make. Whether you're fixing a bug or adding a new feature, your contributions will help make GitaGPT the best it can be.
 
 **Here are just a few ways you can get involved:**
 
@@ -65,4 +65,4 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## License
 
-GitaGPT is open source and licensed under the MIT License.
+Bhagavad Gita AI is open source and licensed under the MIT License.
