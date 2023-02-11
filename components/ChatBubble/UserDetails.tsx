@@ -22,7 +22,7 @@ const UserDetails = ({ sent }: UserDetailsProps) => {
         className={`flex flex-col gap-2 ${sent ? "justify-end items-end" : ""}`}
       >
         <p className="text-sm font-bold tracking-wider leading-none text-gray-800 uppercase whitespace-nowrap">
-          {sent ? "Arjuna" : "GitaGPT"}
+          {sent ? "Arjuna" : "Gita AI"}
         </p>
         <p className="text-xs tracking-wide leading-none text-gray-500">
           {/* {useTimeFormat(time)} */}
