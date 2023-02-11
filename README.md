@@ -1,45 +1,41 @@
-# GitaGPT - Talk to Krishna with Bhagavad Gita AI
+# GitaGPT is a language model chatbot powered by OpenAI's GPT-3.
 
-![bhagavad-gita-ai](https://user-images.githubusercontent.com/32533774/218021917-c578b980-4e5e-4f2e-82f1-b048bd7f8bdc.jpeg)
+GitaGPT is a chatbot powered by OpenAI's GPT-3 and built with Next.js and Vercel. This chatbot is designed to assist users with general knowledge and provide interactive answers to their questions.
 
-[GitaGPT](https://bhagavadgita.ai) is a state-of-the-art AI-powered chatbot that uses the power of artificial intelligence to bring the teachings of Lord Krishna to your everyday life. With GitaGPT, you can have a conversation with Lord Krishna in a conversational manner, receiving personalised answers to your questions and gaining divine guidance in your life.
+## What is GitaGPT?
+
+[GitaGPT.in](https://www.gitagpt.in/) is a chatbot powered by OpenAI's GPT-3 and built with Next.js and Vercel. This chatbot is designed to assist users with general knowledge and provide interactive answers to their questions. GitaGPT is a cutting-edge AI language model developed by the team at [Sahu4you.com](https://www.sahu4you.com).
 
 ## Features
 
+- Utilizes OpenAI's GPT-3, the state-of-the-art language model for natural language processing
+- Built with Next.js and Vercel for fast and efficient performance
+- Provides accurate and informative answers to users' questions
 - Conversational interaction with Lord Krishna using ChatGPT
-- Personalised content tailored to your specific needs
-- Pool of knowledge and wisdom from the Bhagavad Gita
-- Easy-to-understand answers to your questions about faith, life, and well-being
 
 ## How it works
 
-ChatGita uses advanced AI technology to provide you with answers to your questions based on the teachings of the Bhagavad Gita. Simply ask a question related to your faith or life and receive a response in a conversational format. The conversations are recorded in a fixed context to provide you with a better understanding of the teachings of Lord Krishna.
+Getting Started, To get started with GitaGPT, simply type in your question and receive a response from the chatbot.
 
 ## Why GitaGPT?
 
 GitaGPT offers an unparalleled experience for those seeking to connect with the divine and gain a deeper understanding of the teachings of the Bhagavad Gita. With its user-friendly interface, personalised content, and advanced AI technology, GitaGPT provides you with the spiritual guidance and comfort you need in your life.
 
-## Try ChatGita for yourself
+## Built With
 
-ChatGita has already become viral, with thousands of people using it to answer their everyday queries. Test its accuracy for yourself and see if it can help you gain a deeper understanding of the teachings of Lord Krishna.
+- Next.js - The React-based framework used for building the website
+- Vercel - The hosting platform used to deploy the website
+- OpenAI GPT-3 - The language model used for generating responses
+
 
 ## Contributing
 
 We welcome contributions to GitaGPT and encourage you to submit pull requests with any improvements you make. Whether you're fixing a bug or adding a new feature, your contributions will help make GitaGPT the best it can be.
 
-**Here are just a few ways you can get involved:**
-
-- 🎨 Are you a designer? Help us create beautiful and user-friendly interfaces for our websites and apps.
-- 💻 Are you a developer? Help us build innovative and cutting-edge software applications.
-- 📝 Are you a writer? Contribute articles, blog posts, or even create video content that can help spread the teachings of Sanatana Dharma.
-- 📱 Are you a social media expert? Help us reach out to more people and spread the word about our work.
-- 🔍 Are you an SEO expert? Help us make sure our content is easily accessible and ranks high on search engines.
 
 So what are you waiting for?
 
 🚀 Let's make a difference together! 🙌
-
-[Join our WhatsApp group to connect with like-minded individuals and get involved.](https://chat.whatsapp.com/DJELAm60HsKKkoVU1mH3fu)
 
 ### Getting Started
 
