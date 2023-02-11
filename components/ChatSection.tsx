@@ -1,14 +1,12 @@
-import ChatBubble from '@/components/ChatBubble'
-import Data from '@/constants/sampleData.json'
-import { SetStateAction } from 'react'
-import React from 'react'
+import ChatBubble from "@/components/ChatBubble";
+import Data from "@/constants/sampleData.json";
+import { SetStateAction } from "react";
 
 interface ChatSectionProps {
-  showSuggestions: boolean
-  setShowSuggestions: React.Dispatch<SetStateAction<boolean>>
-  chat?: Array<{ sent: boolean; message: string }>
+  showSuggestions: boolean;
+  setShowSuggestions: React.Dispatch<SetStateAction<boolean>>;
+  chat?: Array<{ sent: boolean; message: string }>;
 }
-
 const ChatSection = ({
   showSuggestions,
   setShowSuggestions,
@@ -41,7 +39,7 @@ const ChatSection = ({
         )
       })}
     </section>
-  )
-}
+  );
+};
 
-export default ChatSection
+export default ChatSection;

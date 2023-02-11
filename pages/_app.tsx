@@ -1,12 +1,15 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import PlausibleProvider from 'next-plausible'
-import Script from 'next/script'
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import PlausibleProvider from "next-plausible";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
       <Script strategy="lazyOnload" id="gtag">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -17,9 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
           });
         `}
       </Script>
-      <PlausibleProvider domain="bhagavadgita.ai" selfHosted={true} customDomain="https://analytics.bhagavadgita.io" trackLocalhost trackOutboundLinks enabled>
+      <PlausibleProvider domain="bhagavadgita.ai" trackOutboundLinks>
         <Component {...pageProps} />
       </PlausibleProvider>
     </>
-  )
+  );
 }

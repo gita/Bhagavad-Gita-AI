@@ -1,17 +1,17 @@
-import React, { useState, SetStateAction, useEffect } from 'react'
-import SuggestionBox from './SuggestionBox'
-import { GenerateAnswer } from '@/apiFunctions/generate'
-import { usePlausible } from 'next-plausible'
+import React, { useState, SetStateAction, useEffect } from "react";
+import SuggestionBox from "./SuggestionBox";
+import { GenerateAnswer } from "@/apiFunctions/generate";
+import { usePlausible } from "next-plausible";
 
 interface InputProps {
-  showSuggestions: boolean
-  setShowSuggestions: React.Dispatch<SetStateAction<boolean>>
-  input: string
-  setInput: React.Dispatch<SetStateAction<string>>
-  chat?: Array<{ sent: boolean; message: string }>
+  showSuggestions: boolean;
+  setShowSuggestions: React.Dispatch<SetStateAction<boolean>>;
+  input: string;
+  setInput: React.Dispatch<SetStateAction<string>>;
+  chat?: Array<{ sent: boolean; message: string }>;
   setChat: React.Dispatch<
     SetStateAction<Array<{ sent: boolean; message: string }> | undefined>
-  >
+  >;
 }
 const Input = ({
   showSuggestions,
@@ -74,7 +74,7 @@ const Input = ({
       //   event_label: input,
       // })
     }
-  }
+  };
   return (
     <div className="flex gap-2 items-end">
       {/* className made relative */}
@@ -153,4 +153,4 @@ const Input = ({
   )
 }
 
-export default Input
+export default Input;
