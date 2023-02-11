@@ -96,24 +96,40 @@ const Input = ({
           className="w-full h-12 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
         />
         <button
-          className={`ask-krishna absolute right-0 bottom-0 bg-primary-500 rounded-lg h-12 aspect-square grid place-items-center`}
+          className={`ask-krishna absolute right-0 bottom-0 border-left-none focus:ring-primary-500 rounded-lg h-12 aspect-square grid place-items-center`}
           onClick={handleGenerate}
           id="askKrishna"
+          style={{
+            //   backgroundColor: 'white',
+            borderLeft: 'none',
+            //   border: '1px solid gray',
+            //   borderRadius: 'lg',
+            //   // height: '10px',
+            //   // width: '10px',
+            //   display: 'grid',
+            //   placeItems: 'center',
+            //   position: 'absolute',
+            //   right: '0',
+            //   bottom: '0',
+          }}
         >
           {!loading ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-6 h-6 text-white"
+              // fill="orange"
+              fill="none"
+              stroke="orange"
+              stroke-width="2"
+              className="w-6 h-6 text-black"
             >
               <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
             </svg>
           ) : (
             <svg
-              className="animate-spin h-7 w-7 text-white"
+              className="animate-spin h-7 w-7 text-black"
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
+              fill="orange"
               viewBox="0 0 24 24"
             >
               <circle
@@ -121,12 +137,12 @@ const Input = ({
                 cx="12"
                 cy="12"
                 r="10"
-                stroke="currentColor"
+                stroke="orange"
                 strokeWidth="4"
               ></circle>
               <path
                 className="opacity-75"
-                fill="currentColor"
+                fill="orange"
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
