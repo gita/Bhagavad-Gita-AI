@@ -39,7 +39,7 @@ So what are you waiting for?
 
 🚀 Let's make a difference together! 🙌
 
-[Join our WhatsApp group to connect with like-minded individuals and get involved.](https://chat.whatsapp.com/DJELAm60HsKKkoVU1mH3fu)
+[Join our Slack to connect with like-minded individuals and get involved.](https://join.slack.com/t/vedvyas/shared_invite/zt-1o5himgxu-1e905aI7FM_8QsxbtiyVNA)
 
 ### Getting Started
 
