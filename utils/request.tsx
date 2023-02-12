@@ -1,9 +1,12 @@
 import axios from "axios";
+import Cookies from "js-cookie";
+
+
 
 const config = {
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_APP_URL,
   headers: {
-    'X-API-KEY': process.env.NEXT_PUBLIC_API_KEY,
+    'token': Cookies.get("Token")
   }
 };
 

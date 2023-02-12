@@ -1,6 +1,6 @@
 import Request from "../utils/request";
 
-const baseUrl = "/content";
+
 
 export interface ChatGeneration {
   answer: string;
@@ -16,7 +16,7 @@ export interface ChatInput{
 export const GenerateAnswer = ({question,chat_history}:ChatInput): Promise<ChatGeneration> => {
   return new Promise((resolve, reject) => {
     Request({
-      url: `${baseUrl}/bhagavad_gita`,
+      url: `/api/generate`,
       method: "post",
         data: {
             question: question,

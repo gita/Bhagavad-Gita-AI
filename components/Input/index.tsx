@@ -2,6 +2,8 @@ import React, { useState, SetStateAction, useEffect } from 'react'
 import SuggestionBox from './SuggestionBox'
 import { GenerateAnswer } from '@/apiFunctions/generate';
 import { usePlausible } from 'next-plausible'
+import SupaAuthModal from '@/components/auth/SupaAuthModal'
+import { useCookies } from 'react-cookie';
 
 
 interface InputProps {
@@ -18,6 +20,21 @@ const Input = (
   const plausible = usePlausible()
   const [loading, setLoading] = useState<boolean>(false);
   const [chatHistory, setChatHistory] = useState<Array<string>>([]);
+  const [open,setOpen] = useState<boolean>(false);
+  const [cookies, setCookie, removeCookie] = useCookies(['Token']);
+
+  useEffect(() => {
+    const token = cookies?.Token;
+    if (token) {
+      setOpen(false);
+    }
+    else{
+      setOpen(true);
+    }
+  }, [])
+
+  const token = cookies?.Token;
+  console.log(token)
 
   const handleGenerate = async () => {
     try {
@@ -42,17 +59,20 @@ const Input = (
 
     }
     catch (err: any) {
-      console.log(err?.response?.status)
+      
       if (err?.response?.status === 429) {
         let history = chat;
         history?.push({ "sent": false, "message": "Oh devoted one, I apologize for not being able to attend to you in this moment. Please have patience and come back after a small while, as I am currently occupied." })
         setChat(history);
         setInput("")
       }
+      else if (err?.response?.status == 401) {
+        setOpen(true);
+      }
     }
     finally {
       setLoading(false)
-      plausible('AskKrishna')
+      plausible('AskKrishna');
       // sent event to Google Analytics 4 (gtag.js)
       (window as any).gtag('event', 'ask_krishna', {
         'event_category': 'Generate',
@@ -101,6 +121,7 @@ const Input = (
           }
         </button>
       </div>
+      <SupaAuthModal open={open} setOpen={setOpen} />
     </>
   )
 }
