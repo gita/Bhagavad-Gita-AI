@@ -1,22 +1,32 @@
-import ChatSection from "@/components/ChatSection";
-import Header from "@/components/Header";
-import Input from "@/components/Input";
 import Navbar from "@/components/Navbar";
-import { useState } from "react";
 import Head from "next/head";
 
-export default function Home() {
-  const [showSuggestions, setShowSuggestions] = useState<boolean>(true);
-  const [input, setInput] = useState<string>("");
-  const [chat, setChat] = useState<Array<{ sent: boolean; message: string }>>();
+import { NotionAPI } from "notion-client";
+import { ExtendedRecordMap } from "notion-types";
 
+import { NotionPage } from "@/components/NotionPage";
+import { rootNotionPageId, previewImagesEnabled } from "@/lib/config";
+import * as notion from "@/lib/notion";
+
+export const getStaticProps = async (context: any) => {
+  const recordMap = await notion.getPage(rootNotionPageId);
+
+  return {
+    props: {
+      recordMap,
+    },
+    revalidate: 10,
+  };
+};
+
+export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
   function addJsonLd() {
     return {
       __html: `{
           "@context": "http://schema.org",
           "@type": "WebSite",
-          "name": "Bhagavad Gita AI",
-          "url": "https://bhagavadgita.ai",
+          "name": "About Us Bhagavad Gita AI",
+          "url": "https://bhagavadgita.ai/about",
           "sameAs": [
             "https://twitter.com/ShriKrishna",
           ],
@@ -44,9 +54,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT
-        </title>
+        <title>About Us - Bhagavad Gita AI</title>
         <link
           rel="icon"
           type="image/png"
@@ -64,16 +72,13 @@ export default function Home() {
         <meta name="robots" content="index,follow" />
         <meta name="author" content="Ved Vyas Foundation" />
 
-        <meta
-          property="og:title"
-          content="Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT"
-        />
+        <meta property="og:title" content="About Us - Bhagavad Gita AI" />
         <meta
           property="og:description"
           content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bhagavadgita.ai" />
+        <meta property="og:url" content="https://bhagavadgita.ai/about" />
         <meta
           property="og:image"
           content="https://sanskriti-ai.s3.ap-south-1.amazonaws.com/bhagavad-gita-ai.jpeg"
@@ -82,10 +87,7 @@ export default function Home() {
         <meta property="og:locale" content="en_US" />
 
         <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:title"
-          content="Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT"
-        />
+        <meta name="twitter:title" content="About Us - Bhagavad Gita AI" />
         <meta
           name="twitter:description"
           content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
@@ -104,17 +106,11 @@ export default function Home() {
         />
       </Head>
       <Navbar></Navbar>
-      <main className="max-w-4xl pt-5 pb-2 mx-auto h-[90vh] grid grid-rows-layout gap-2 px-4">
-        <Header />
-        <ChatSection chat={chat} />
-
-        <Input
-          showSuggestions={showSuggestions}
-          setShowSuggestions={setShowSuggestions}
-          input={input}
-          setInput={setInput}
-          chat={chat}
-          setChat={setChat}
+      <main className="max-w-4xl pt-5 pb-2 mx-auto h-[100vh]">
+        <NotionPage
+          recordMap={recordMap}
+          rootPageId={rootNotionPageId}
+          previewImagesEnabled={previewImagesEnabled}
         />
       </main>
     </>

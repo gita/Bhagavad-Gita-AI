@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
-const { withPlausibleProxy } = require('next-plausible')
-
 const nextConfig = {
   reactStrictMode: true,
-}
+};
 
-module.exports = withPlausibleProxy()({
+module.exports = {
   // add image sources
   images: {
-    images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'via.placeholder.com',
-        },
-      ],
-    },
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.notion.so",
+      },
+    ],
   },
-})
+};

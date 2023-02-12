@@ -6,28 +6,47 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "find:unused": "npx next-unused",
+    "prettier": "prettier --write .",
+    "lint": "next lint",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc"
   },
+  "pre-commit": [
+    "find:unused",
+    "lint",
+    "type-check",
+    "lint:fix",
+    "prettier"
+  ],
   "dependencies": {
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.14",
+    "@types/lqip-modern": "^1.1.2",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "axios": "^1.3.2",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "lqip-modern": "^2.0.0",
     "next": "13.1.6",
     "next-plausible": "^3.7.2",
+    "notion-client": "^6.15.8",
+    "notion-utils": "^6.15.8",
+    "p-map": "^5.5.0",
+    "p-memoize": "^7.1.1",
     "prettier": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-notion-x": "^6.15.8",
     "tailwind-scrollbar": "^2.1.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
+    "pre-commit": "^1.2.2",
     "tailwindcss": "^3.2.4"
   }
 }
