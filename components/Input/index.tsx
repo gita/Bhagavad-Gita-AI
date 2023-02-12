@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-import React, { useState, SetStateAction, useEffect } from 'react'
-import SuggestionBox from './SuggestionBox'
-import { GenerateAnswer } from '@/apiFunctions/generate';
-import { usePlausible } from 'next-plausible'
 import SupaAuthModal from '@/components/auth/SupaAuthModal'
 import { useCookies } from 'react-cookie';
 
-=======
 import React, { useState, SetStateAction, useEffect } from "react";
 import SuggestionBox from "./SuggestionBox";
 import { GenerateAnswer } from "@/apiFunctions/generate";
 import { usePlausible } from "next-plausible";
->>>>>>> cd4b66e5d229f253ad255b14aeef3c775ac263be
 
 interface InputProps {
   showSuggestions: boolean;
@@ -81,14 +74,7 @@ const Input = ({
       setChat(chatArray);
       setShowSuggestions(false);
       setInput("");
-<<<<<<< HEAD
-
-    }
-    catch (err: any) {
-      
-=======
     } catch (err: Error | any) {
->>>>>>> cd4b66e5d229f253ad255b14aeef3c775ac263be
       if (err?.response?.status === 429) {
         let history = chat;
         history?.push({
@@ -99,19 +85,6 @@ const Input = ({
         setChat(history);
         setInput("");
       }
-<<<<<<< HEAD
-      else if (err?.response?.status == 401) {
-        setOpen(true);
-      }
-    }
-    finally {
-      setLoading(false)
-      plausible('AskKrishna');
-      // sent event to Google Analytics 4 (gtag.js)
-      (window as any).gtag('event', 'ask_krishna', {
-        'event_category': 'Generate',
-        'event_label': input
-=======
     } finally {
       setLoading(false);
       plausible("AskKrishna");
@@ -119,7 +92,6 @@ const Input = ({
       (window as any).gtag("event", "ask_krishna", {
         event_category: "Generate",
         event_label: input,
->>>>>>> cd4b66e5d229f253ad255b14aeef3c775ac263be
       });
     }
   };
@@ -187,15 +159,9 @@ const Input = ({
           )}
         </button>
       </div>
-<<<<<<< HEAD
       <SupaAuthModal open={open} setOpen={setOpen} />
-    </>
+    </div>
   )
 }
-=======
-    </div>
-  );
-};
->>>>>>> cd4b66e5d229f253ad255b14aeef3c775ac263be
 
 export default Input;
