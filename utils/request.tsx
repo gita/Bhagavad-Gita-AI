@@ -10,8 +10,6 @@ const config = {
   }
 };
 
-const service = axios.create(
-  config
-);
+const service = axios.create(config);
 
 export default service;
