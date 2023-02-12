@@ -27,20 +27,33 @@ const Header = () => {
         </p>
         <div className="ml-2">
           <Tooltip message={"Follow us on Twitter!"}>
-            <a href="https://twitter.com/ShriKrishna" target="_blank" rel="noreferrer">
-              <Image src="/icons8-twitter-96.png" alt="Twitter" width={20} height={20} />
+            <a
+              href="https://twitter.com/ShriKrishna"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src="/icons8-twitter-96.png"
+                alt="Twitter"
+                width={20}
+                height={20}
+              />
             </a>
           </Tooltip>
         </div>
         <div className="ml-1">
           <Tooltip message={"Gita AI is open source. Come contribute."}>
             <a href="https://github.com/gita" target="_blank" rel="noreferrer">
-              <Image src="/icons8-github-90.png" alt="Github" width={20} height={20} />
+              <Image
+                src="/icons8-github-90.png"
+                alt="Github"
+                width={20}
+                height={20}
+              />
             </a>
           </Tooltip>
         </div>
       </div>
-
     </header>
   );
 };

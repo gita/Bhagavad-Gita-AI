@@ -1,7 +1,5 @@
 import Request from "../utils/request";
 
-
-
 export interface ChatGeneration {
   answer: string;
   chat_history: any;

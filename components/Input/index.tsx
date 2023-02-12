@@ -1,5 +1,5 @@
-import SupaAuthModal from '@/components/auth/SupaAuthModal'
-import { useCookies } from 'react-cookie';
+import SupaAuthModal from "@/components/auth/SupaAuthModal";
+import { useCookies } from "react-cookie";
 
 import React, { useState, SetStateAction, useEffect } from "react";
 import SuggestionBox from "./SuggestionBox";
@@ -31,21 +31,20 @@ const Input = ({
   const plausible = usePlausible();
   const [loading, setLoading] = useState<boolean>(false);
   const [chatHistory, setChatHistory] = useState<Array<string>>([]);
-  const [open,setOpen] = useState<boolean>(false);
-  const [cookies, setCookie, removeCookie] = useCookies(['Token']);
+  const [open, setOpen] = useState<boolean>(false);
+  const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
 
   useEffect(() => {
     const token = cookies?.Token;
     if (token) {
       setOpen(false);
-    }
-    else{
+    } else {
       setOpen(true);
     }
-  }, [])
+  }, []);
 
   const token = cookies?.Token;
-  console.log(token)
+  console.log(token);
 
   const handleGenerate = async () => {
     try {
@@ -161,7 +160,7 @@ const Input = ({
       </div>
       <SupaAuthModal open={open} setOpen={setOpen} />
     </div>
-  )
-}
+  );
+};
 
 export default Input;

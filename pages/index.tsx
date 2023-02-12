@@ -1,29 +1,27 @@
-import ChatSection from '@/components/ChatSection'
-import Header from '@/components/Header'
-import Input from '@/components/Input'
-import Navbar from '@/components/Navbar'
-import { useEffect, useState } from 'react'
-import Head from 'next/head'
-import { useCookies } from 'react-cookie';
-import { useRouter } from 'next/router'
+import ChatSection from "@/components/ChatSection";
+import Header from "@/components/Header";
+import Input from "@/components/Input";
+import Navbar from "@/components/Navbar";
+import { useEffect, useState } from "react";
+import Head from "next/head";
+import { useCookies } from "react-cookie";
+import { useRouter } from "next/router";
 
 export default function Home() {
-
-  const [showSuggestions, setShowSuggestions] = useState<boolean>(true)
-  const [input, setInput] = useState<string>('');
-  const [chat, setChat] = useState<Array<{ sent: boolean, message: string }>>();
-  const [cookies, setCookie, removeCookie] = useCookies(['Token']);
+  const [showSuggestions, setShowSuggestions] = useState<boolean>(true);
+  const [input, setInput] = useState<string>("");
+  const [chat, setChat] = useState<Array<{ sent: boolean; message: string }>>();
+  const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
   const router = useRouter();
-  
+
   useEffect(() => {
     const pathName = router.asPath;
     const access_token = pathName.match(/\#(?:access_token)\=([\S\s]*?)\&/);
-    
-    if (access_token && access_token.length>1) {
-      setCookie("Token", access_token[1])
-    }
 
-  }, [router.query])
+    if (access_token && access_token.length > 1) {
+      setCookie("Token", access_token[1]);
+    }
+  }, [router.query]);
 
   function addJsonLd() {
     return {
