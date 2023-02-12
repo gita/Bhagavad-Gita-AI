@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Tooltip from "./Tooltip";
 
 const Header = () => {
   return (
@@ -19,11 +21,26 @@ const Header = () => {
           Powered by ChatSonic.
         </a>
       </p>
-      <div className="flex items-start justify-start px-4 py-2 bg-gray-200 rounded-full mx-auto w-fit mt-3">
+      <div className="flex items-center justify-start px-4 py-2 bg-gray-200 rounded-full mx-auto w-fit mt-3">
         <p className="text-xs font-medium tracking-wide leading-none text-center text-black">
           300,000+ devotees guided so far
         </p>
+        <div className="ml-2">
+          <Tooltip message={"Follow us on Twitter!"}>
+            <a href="https://twitter.com/ShriKrishna" target="_blank" rel="noreferrer">
+              <Image src="/icons8-twitter-96.png" alt="Twitter" width={20} height={20} />
+            </a>
+          </Tooltip>
+        </div>
+        <div className="ml-1">
+          <Tooltip message={"Gita AI is open source. Come contribute."}>
+            <a href="https://github.com/gita" target="_blank" rel="noreferrer">
+              <Image src="/icons8-github-90.png" alt="Github" width={20} height={20} />
+            </a>
+          </Tooltip>
+        </div>
       </div>
+
     </header>
   );
 };
