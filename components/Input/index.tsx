@@ -34,17 +34,16 @@ const Input = ({
   const [open, setOpen] = useState<boolean>(false);
   const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
 
-  useEffect(() => {
-    const token = cookies?.Token;
-    if (token) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const token = cookies?.Token;
+  //   if (token) {
+  //     setOpen(false);
+  //   } else {
+  //     setOpen(true);
+  //   }
+  // }, []);
 
   const token = cookies?.Token;
-  console.log(token);
 
   const handleGenerate = async () => {
     try {
@@ -74,6 +73,10 @@ const Input = ({
       setShowSuggestions(false);
       setInput("");
     } catch (err: Error | any) {
+      if(err?.response?.status === 401) {
+        console.log(err)
+        setOpen(true);
+      }
       if (err?.response?.status === 429) {
         let history = chat;
         history?.push({
