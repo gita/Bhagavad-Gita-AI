@@ -88,7 +88,7 @@ const Input = ({
             setInput(e.target.value)
           }
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (e.key === "Enter") {
+            if (e.key === "Enter" && input.trim() != '') {
               handleGenerate();
             }
           }}
@@ -103,7 +103,9 @@ const Input = ({
           id="askKrishna"
           style={{
             borderLeft: "none",
+            opacity: input.trim()!=''? 1:0.5,
           }}
+          disabled={input.trim()==''}
         >
           {!loading ? (
             <svg
