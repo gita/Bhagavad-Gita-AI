@@ -2,12 +2,34 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useCookies } from "react-cookie";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
+  const [cookies] = useCookies(["Token"]);
+  const token = cookies?.Token;
+  // console.log("🚀 ~ file: Navbar.tsx:13 ~ Example ~ cookies", cookies)
+
+  const LoginStatus = (
+    <div
+      className={`flex align-baseline ${
+        token ? "text-green-500" : " text-red-500"
+      } `}
+    >
+      <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
+        <span
+          className={`${
+            token ? "bg-green-100" : "bg-red-100"
+          } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
+        >
+          {token ? "Logged In" : "Log In Required"}
+        </span>
+      </p>
+    </div>
+  );
   return (
     <Disclosure as="nav" className="bg-primary-200 ">
       {({ open }) => (
@@ -28,6 +50,7 @@ export default function Example() {
                   >
                     About Us
                   </Link>
+                  <h1></h1>
                   {/* <a
                     target="_blank"
                     rel="noreferrer"
@@ -101,6 +124,10 @@ export default function Example() {
                     </a>
                   </div>
                 </div>
+
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 rounded-xl">
+                  {LoginStatus}
+                </div>
               </div>
 
               <div className="-mr-2 flex items-center sm:hidden">
@@ -157,6 +184,10 @@ export default function Example() {
               >
                 Bhagavad Gita App
               </Disclosure.Button>
+
+              <div className="ml-2">
+                {LoginStatus}
+              </div>
             </div>
           </Disclosure.Panel>
         </>
