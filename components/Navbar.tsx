@@ -10,15 +10,15 @@ function classNames(...classes: string[]) {
 
 export default function Navbar() {
   const [cookies] = useCookies(["Token"]);
-  
+
   // console.log("🚀 ~ file: Navbar.tsx:13 ~ Example ~ cookies", cookies)
-  
+
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   useEffect(() => {
     const token = cookies?.Token;
     setLoggedIn(token ? true : false);
   }, [loggedIn]);
-  
+
   return (
     <Disclosure as="nav" className="bg-primary-200 ">
       {({ open }) => (
@@ -115,21 +115,21 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 rounded-xl">
-                <div
-      className={`flex align-baseline ${
-        loggedIn ? "text-green-500" : " text-red-500"
-      } `}
-    >
-      <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
-        <span
-          className={`${
-            loggedIn ? "bg-green-100" : "bg-red-100"
-          } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
-        >
-          {loggedIn ? "Logged In" : "Log In Required"}
-        </span>
-      </p>
-    </div>
+                  <div
+                    className={`flex align-baseline ${
+                      loggedIn ? "text-green-500" : " text-red-500"
+                    } `}
+                  >
+                    <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
+                      <span
+                        className={`${
+                          loggedIn ? "bg-green-100" : "bg-red-100"
+                        } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
+                      >
+                        {loggedIn ? "Logged In" : "Log In Required"}
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -189,21 +189,21 @@ export default function Navbar() {
               </Disclosure.Button>
 
               <div className="ml-2">
-              <div
-      className={`flex align-baseline ${
-        loggedIn ? "text-green-500" : " text-red-500"
-      } `}
-    >
-      <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
-        <span
-          className={`${
-            loggedIn ? "bg-green-100" : "bg-red-100"
-          } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
-        >
-          {loggedIn ? "Logged In" : "Log In Required"}
-        </span>
-      </p>
-    </div>
+                <div
+                  className={`flex align-baseline ${
+                    loggedIn ? "text-green-500" : " text-red-500"
+                  } `}
+                >
+                  <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
+                    <span
+                      className={`${
+                        loggedIn ? "bg-green-100" : "bg-red-100"
+                      } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
+                    >
+                      {loggedIn ? "Logged In" : "Log In Required"}
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </Disclosure.Panel>
