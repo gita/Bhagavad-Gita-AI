@@ -21,12 +21,12 @@ export const GenerateAnswer = ({
       url: `/api/generate`,
       method: "post",
       data: {
-        "question": question,
-        "chat_history": chat_history,
+        question: question,
+        chat_history: chat_history,
       },
       headers: {
-        "token":token
-      }
+        token: token,
+      },
     })
       .then(({ data }) => {
         resolve(data);

@@ -34,9 +34,6 @@ const Input = ({
   const [open, setOpen] = useState<boolean>(false);
   const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
 
-
-
-
   const handleGenerate = async () => {
     const token = cookies?.Token;
     if (!token) {
@@ -71,7 +68,7 @@ const Input = ({
       setInput("");
     } catch (err: Error | any) {
       if (err?.response?.status === 401) {
-        setOpen(true);        
+        setOpen(true);
       }
       if (err?.response?.status === 429) {
         let history = chat;
