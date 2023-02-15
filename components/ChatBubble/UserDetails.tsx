@@ -16,7 +16,7 @@ const UserDetails = ({ sent }: UserDetailsProps) => {
         height={58}
         width={58}
         className="flex-1 aspect-square h-10 w-10 md:h-14 md:w-14 rounded-full"
-        src={sent ? "/Avatars/arjuna.png" : "/Avatars/krishna.png"}
+        src={sent ? "/Avatars/arjuna.jpg" : "/Avatars/krishna.jpg"}
       />
       <div
         className={`flex flex-col gap-2 ${sent ? "justify-end items-end" : ""}`}

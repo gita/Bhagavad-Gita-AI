@@ -1,12 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Tooltip from "./Tooltip";
 
 const Header = () => {
   return (
     <header>
       <h1 className="text-4xl md:text-3xl flex items-center justify-center text-center bg-clip-text h-10 md:h-16 text-transparent bg-gradient-to-r from-yellow-500 to-orange-500 font-extrabold mb-1">
-        BhagavadGita.ai
+        <Image
+          src="/BhagavadGitaai.png"
+          alt="Bhagavad Gita AI"
+          width={195.2}
+          height={40}
+        />
       </h1>
       <p className="text-md leading-normal text-center text-gray-500">
         Unlock Your Potential with GitaGPT - The AI-Powered Spiritual Companion.
@@ -26,21 +30,30 @@ const Header = () => {
           300,000+ devotees guided so far
         </p>
         <div className="ml-2">
-          <Tooltip message={"Follow us on Twitter!"}>
-            <a href="https://twitter.com/ShriKrishna" target="_blank" rel="noreferrer">
-              <Image src="/icons8-twitter-96.png" alt="Twitter" width={20} height={20} />
-            </a>
-          </Tooltip>
+          <a
+            href="https://twitter.com/ShriKrishna"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/icons8-twitter-96.png"
+              alt="Twitter"
+              width={20}
+              height={20}
+            />
+          </a>
         </div>
         <div className="ml-1">
-          <Tooltip message={"Gita AI is open source. Come contribute."}>
-            <a href="https://github.com/gita" target="_blank" rel="noreferrer">
-              <Image src="/icons8-github-90.png" alt="Github" width={20} height={20} />
-            </a>
-          </Tooltip>
+          <a href="https://github.com/gita" target="_blank" rel="noreferrer">
+            <Image
+              src="/icons8-github-90.png"
+              alt="Github"
+              width={20}
+              height={20}
+            />
+          </a>
         </div>
       </div>
-
     </header>
   );
 };

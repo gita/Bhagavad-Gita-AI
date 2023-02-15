@@ -1,6 +1,5 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 function classNames(...classes: string[]) {
@@ -28,15 +27,15 @@ export default function Example() {
                   >
                     About Us
                   </Link>
-                  {/* <a
+                  <a
                     target="_blank"
                     rel="noreferrer"
                     referrerPolicy="no-referrer"
-                    href="https://github.com/sponsors/gita"
+                    href="https://opencollective.com/the-gita-initiative"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700"
                   >
                     Donate
-                  </a> */}
+                  </a>
                 </div>
               </div>
 
