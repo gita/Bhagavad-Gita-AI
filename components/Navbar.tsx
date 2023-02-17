@@ -1,13 +1,24 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useCookies } from "react-cookie";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
+  const [cookies] = useCookies(["Token"]);
+
+  // console.log("🚀 ~ file: Navbar.tsx:13 ~ Example ~ cookies", cookies)
+
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  useEffect(() => {
+    const token = cookies?.Token;
+    setLoggedIn(token ? true : false);
+  }, [loggedIn]);
+
   return (
     <Disclosure as="nav" className="bg-primary-200 ">
       {({ open }) => (
@@ -28,6 +39,7 @@ export default function Example() {
                   >
                     About Us
                   </Link>
+                  <h1></h1>
                   {/* <a
                     target="_blank"
                     rel="noreferrer"
@@ -101,6 +113,24 @@ export default function Example() {
                     </a>
                   </div>
                 </div>
+
+                <div className="hidden sm:ml-6 sm:flex sm:space-x-8 rounded-xl">
+                  <div
+                    className={`flex align-baseline ${
+                      loggedIn ? "text-green-500" : " text-red-500"
+                    } `}
+                  >
+                    <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
+                      <span
+                        className={`${
+                          loggedIn ? "bg-green-100" : "bg-red-100"
+                        } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
+                      >
+                        {loggedIn ? "Logged In" : "Log In Required"}
+                      </span>
+                    </p>
+                  </div>
+                </div>
               </div>
 
               <div className="-mr-2 flex items-center sm:hidden">
@@ -157,6 +187,24 @@ export default function Example() {
               >
                 Bhagavad Gita App
               </Disclosure.Button>
+
+              <div className="ml-2">
+                <div
+                  className={`flex align-baseline ${
+                    loggedIn ? "text-green-500" : " text-red-500"
+                  } `}
+                >
+                  <p className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium ">
+                    <span
+                      className={`${
+                        loggedIn ? "bg-green-100" : "bg-red-100"
+                      } text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
+                    >
+                      {loggedIn ? "Logged In" : "Log In Required"}
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
           </Disclosure.Panel>
         </>

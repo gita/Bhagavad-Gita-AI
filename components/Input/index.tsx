@@ -1,3 +1,6 @@
+import SupaAuthModal from "@/components/auth/SupaAuthModal";
+import { useCookies } from "react-cookie";
+
 import React, { useState, SetStateAction, useEffect } from "react";
 import SuggestionBox from "./SuggestionBox";
 import { GenerateAnswer } from "@/apiFunctions/generate";
@@ -28,13 +31,20 @@ const Input = ({
   const plausible = usePlausible();
   const [loading, setLoading] = useState<boolean>(false);
   const [chatHistory, setChatHistory] = useState<Array<string>>([]);
+  const [open, setOpen] = useState<boolean>(false);
+  const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
 
   const handleGenerate = async () => {
+    const token = cookies?.Token;
+    if (!token) {
+      setOpen(true);
+    }
     try {
       setLoading(true);
       const data = await GenerateAnswer({
         question: input,
         chat_history: chatHistory,
+        token: token,
       });
       let chatArray: Array<any> = [];
       setChatHistory(data.chat_history);
@@ -57,6 +67,9 @@ const Input = ({
       setShowSuggestions(false);
       setInput("");
     } catch (err: Error | any) {
+      if (err?.response?.status === 401) {
+        setOpen(true);
+      }
       if (err?.response?.status === 429) {
         let history = chat;
         history?.push({
@@ -143,6 +156,7 @@ const Input = ({
           )}
         </button>
       </div>
+      <SupaAuthModal open={open} setOpen={setOpen} />
     </div>
   );
 };
