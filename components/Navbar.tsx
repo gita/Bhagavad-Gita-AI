@@ -17,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
     const token = cookies?.Token;
     setLoggedIn(token ? true : false);
-  }, [loggedIn]);
+  }, [loggedIn,cookies]);
 
   return (
     <Disclosure as="nav" className="bg-primary-200 ">
