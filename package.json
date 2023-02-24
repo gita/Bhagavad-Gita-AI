@@ -46,6 +46,8 @@
     "react-cookie": "^4.1.1",
     "react-dom": "18.2.0",
     "react-notion-x": "^6.15.8",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.13.11",
     "tailwind-scrollbar": "^2.1.0",
     "typescript": "4.9.5"
   },
