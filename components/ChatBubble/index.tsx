@@ -29,9 +29,10 @@ const ChatBubble = ({ message, sent }: ChatBubbleProps) => {
                 : 'md:ml-6 rounded-tl-none bg-primary-100'
             }`}
           >
-            <p className="text-sm md:text-base leading-normal text-gray-900">
-              {message}
-            </p>
+            <p
+              className="text-sm md:text-base leading-normal text-gray-900"
+              dangerouslySetInnerHTML={{ __html: message }}
+            ></p>
           </div>
         </div>
       </div>
