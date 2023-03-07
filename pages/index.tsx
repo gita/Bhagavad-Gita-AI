@@ -1,27 +1,27 @@
-import ChatSection from "@/components/ChatSection";
-import Header from "@/components/Header";
-import Input from "@/components/Input";
-import Navbar from "@/components/Navbar";
-import { useEffect, useState } from "react";
-import Head from "next/head";
-import { useCookies } from "react-cookie";
-import { useRouter } from "next/router";
+import ChatSection from '@/components/ChatSection'
+import Header from '@/components/Header'
+import Input from '@/components/Input'
+import Navbar from '@/components/Navbar'
+import { useEffect, useState } from 'react'
+import Head from 'next/head'
+import { useCookies } from 'react-cookie'
+import { useRouter } from 'next/router'
 
 export default function Home() {
-  const [showSuggestions, setShowSuggestions] = useState<boolean>(true);
-  const [input, setInput] = useState<string>("");
-  const [chat, setChat] = useState<Array<{ sent: boolean; message: string }>>();
-  const [cookies, setCookie, removeCookie] = useCookies(["Token"]);
-  const router = useRouter();
+  const [showSuggestions, setShowSuggestions] = useState<boolean>(true)
+  const [input, setInput] = useState<string>('')
+  const [chat, setChat] = useState<Array<{ sent: boolean; message: string }>>()
+  const [cookies, setCookie, removeCookie] = useCookies(['Token'])
+  const router = useRouter()
 
   useEffect(() => {
-    const pathName = router.asPath;
-    const access_token = pathName.match(/\#(?:access_token)\=([\S\s]*?)\&/);
+    const pathName = router.asPath
+    const access_token = pathName.match(/\#(?:access_token)\=([\S\s]*?)\&/)
 
     if (access_token && access_token.length > 1) {
-      setCookie("Token", access_token[1]);
+      setCookie('Token', access_token[1])
     }
-  }, [router.query]);
+  }, [router.query])
 
   function addJsonLd() {
     return {
@@ -51,7 +51,7 @@ export default function Home() {
           },
         }
       `,
-    };
+    }
   }
 
   return (
@@ -118,7 +118,7 @@ export default function Home() {
       </Head>
       <Navbar></Navbar>
       <main className="max-w-4xl pt-5 pb-2 mx-auto h-[90vh] grid grid-rows-layout gap-2 px-4">
-        <Header />
+        {/* <Header /> */}
         <ChatSection chat={chat} />
 
         <Input
@@ -131,5 +131,5 @@ export default function Home() {
         />
       </main>
     </>
-  );
+  )
 }
