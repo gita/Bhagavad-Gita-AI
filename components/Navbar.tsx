@@ -39,7 +39,6 @@ export default function Navbar() {
                   >
                     About Us
                   </Link>
-                  <h1></h1>
                   {/* <a
                     target="_blank"
                     rel="noreferrer"
