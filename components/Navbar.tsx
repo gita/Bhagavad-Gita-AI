@@ -188,7 +188,7 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="https://play.google.com/store/apps/details?id=com.gitainitiative.bhagavadgita"
-                className="block border-l-4 border-transparent py-2 pl-3 mx-auto pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className="block border-l-4 border-transparent px-4 mx-auto pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Bhagavad Gita App
               </Disclosure.Button>
