@@ -51,9 +51,9 @@ export default function Navbar() {
                   </a> */}
                   <Link
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700"
-                    href="/about"
+                    href="/https://github.com/gita/Bhagavad-Gita-AI/"
                   >
-                    About Us
+                    Open Source
                   </Link>
                 </div>
               </div>
