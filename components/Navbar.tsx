@@ -39,7 +39,6 @@ export default function Navbar() {
                   >
                     About Us
                   </Link>
-                  <h1></h1>
                   {/* <a
                     target="_blank"
                     rel="noreferrer"
@@ -49,6 +48,12 @@ export default function Navbar() {
                   >
                     Donate
                   </a> */}
+                  <Link
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-700"
+                    href="/https://github.com/gita/Bhagavad-Gita-AI/" title='We are open source'
+                  >
+                    Open Source
+                  </Link>
                 </div>
               </div>
 
@@ -154,7 +159,7 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="/"
-                className="block border-l-4 border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500"
+                className="block border-l-4 mx-auto border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500"
               >
                 Home
               </Disclosure.Button>
@@ -162,28 +167,28 @@ export default function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="/about"
-                className="block border-l-4 border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500"
+                className="block border-l-4 mx-auto border-primary-500 hover:bg-primary-100 py-2 pl-3 pr-4 text-base font-medium text-gray-500"
               >
                 About Us
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://opencollective.com/the-gita-initiative"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className="block border-l-4 border-transparent mx-auto py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Donate
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://bhagavadgita.io/"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className="block border-l-4 border-transparent py-2 px-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 BhagavadGita.io
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="https://play.google.com/store/apps/details?id=com.gitainitiative.bhagavadgita"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
+                className="block border-l-4 border-transparent px-4 mx-auto pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Bhagavad Gita App
               </Disclosure.Button>
