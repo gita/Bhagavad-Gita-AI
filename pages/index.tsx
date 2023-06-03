@@ -37,7 +37,7 @@ export default function Home() {
             "@type": "Thing",
             "name": "Bhagavad Gita"
           },
-          "description": "Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before.",
+          "description": "GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT.",
           "publisher": {
             "@type": "Organization",
             "name": "Ved Vyas Foundation",
@@ -58,7 +58,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT
+          Bhagavad Gita AI - Gita GPT - Ask Krishna
         </title>
         <link
           rel="icon"
@@ -68,7 +68,7 @@ export default function Home() {
 
         <meta
           name="description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta
           name="keywords"
@@ -79,11 +79,11 @@ export default function Home() {
 
         <meta
           property="og:title"
-          content="Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT"
+          content="Bhagavad Gita AI - Gita GPT - Ask Krishna"
         />
         <meta
           property="og:description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bhagavadgita.ai" />
@@ -97,11 +97,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="Bhagavad Gita AI: Unlock the Wisdom of Krishna with GitaGPT"
+          content="Bhagavad Gita AI - Gita GPT - Ask Krishna"
         />
         <meta
           name="twitter:description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta
           name="twitter:image"
