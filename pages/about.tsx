@@ -34,7 +34,7 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
             "@type": "Thing",
             "name": "Bhagavad Gita"
           },
-          "description": "Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before.",
+          "description": "GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT.",
           "publisher": {
             "@type": "Organization",
             "name": "Ved Vyas Foundation",
@@ -63,7 +63,7 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
 
         <meta
           name="description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta
           name="keywords"
@@ -75,7 +75,7 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
         <meta property="og:title" content="About Us - Bhagavad Gita AI" />
         <meta
           property="og:description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bhagavadgita.ai/about" />
@@ -90,7 +90,7 @@ export default function About({ recordMap }: { recordMap: ExtendedRecordMap }) {
         <meta name="twitter:title" content="About Us - Bhagavad Gita AI" />
         <meta
           name="twitter:description"
-          content="Unlock the wisdom of Krishna with Bhagavad Gita AI and ChatGPT-powered insights. Experience personalized interpretation of the Bhagavad Gita like never before."
+          content="GitaGPT is a free Bhagavad Gita AI chatbot that uses the wisdom of the Bhagavad Gita to help answer your day-to-day questions. It's simple, insightful, and powered by ChatGPT."
         />
         <meta
           name="twitter:image"

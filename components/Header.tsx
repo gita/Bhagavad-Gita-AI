@@ -9,7 +9,7 @@ const Header = () => {
         BhagavadGita.ai
       </h1>
       <p className="text-md leading-normal text-center text-gray-500">
-        Unlock Your Potential with GitaGPT - The AI-Powered Spiritual Companion.
+        Get Answers to Life&apos;s Questions with GitaGPT - Your AI Spiritual Companion.
         {/* </p> */}
         {/* <p className="text-sm leading-normal text-center"> */}
         <a
