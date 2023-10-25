@@ -35,7 +35,7 @@
     "eslint-config-next": "13.1.6",
     "js-cookie": "^3.0.1",
     "lqip-modern": "^2.0.0",
-    "next": "13.1.6",
+    "next": "13.5.0",
     "next-plausible": "^3.7.2",
     "notion-client": "^6.15.8",
     "notion-utils": "^6.15.8",
