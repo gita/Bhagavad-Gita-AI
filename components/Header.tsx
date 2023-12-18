@@ -35,7 +35,6 @@ const Header = () => {
             >
               <Image src="/iconx.png" alt="Twitter" width={18} height={18} />
             </a>
-
           </Tooltip>
         </div>
         <div className="ml-1">
