@@ -33,7 +33,7 @@ const Header = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Image src="/iconx.png" alt="Twitter" width={18} height={18} />
+              <Image src="/icons8-twitter-96.png" alt="Twitter" width={15} height={15} />
             </a>
           </Tooltip>
         </div>
