@@ -9,7 +9,8 @@ const Header = () => {
         BhagavadGita.ai
       </h1>
       <p className="text-md leading-normal text-center text-gray-500">
-        Get Answers to Life&apos;s Questions with GitaGPT - Your AI Spiritual Companion.
+        Get Answers to Life&apos;s Questions with GitaGPT - Your AI Spiritual
+        Companion.
         {/* </p> */}
         {/* <p className="text-sm leading-normal text-center"> */}
         <a
@@ -32,12 +33,7 @@ const Header = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Image
-                src="/icons8-twitter-96.png"
-                alt="Twitter"
-                width={20}
-                height={20}
-              />
+              <Image src="/icons8-twitter-96.png" alt="Twitter" width={15} height={15} />
             </a>
           </Tooltip>
         </div>
